@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <projectUrl>https://github.com/jacobjones/DoubleJay.Epi.ConfigurableColorPicker</projectUrl>
+    <licenseUrl>https://github.com/jacobjones/DoubleJay.Epi.ConfigurableColorPicker/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="bin\DoubleJay.Epi.ConfigurableColorPicker.zip" target="content\modules\_protected\DoubleJay.Epi.ConfigurableColorPicker" />
+  </files>
+</package>
