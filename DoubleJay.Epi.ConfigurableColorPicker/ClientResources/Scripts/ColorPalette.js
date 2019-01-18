@@ -1,5 +1,4 @@
 define([
-    "dojo/text!./templates/ColorPalette.html",
     "dijit/_Widget",
     "dijit/_TemplatedMixin",
     "dijit/_WidgetsInTemplateMixin",
@@ -8,38 +7,38 @@ define([
     "dojo/dom-class",
     "dojo/dom-construct",
     "dojo/string"
-], function (template, _Widget, _TemplatedMixin, _WidgetsInTemplateMixin, _PaletteMixin, declare, domClass, domConstruct, string) {
+], function (_Widget, _TemplatedMixin, _WidgetsInTemplateMixin, _PaletteMixin, declare, domClass, domConstruct, string) {
 
-    var ColorPalette = declare("alloy.editors.ColorPalette", [_Widget, _TemplatedMixin, _WidgetsInTemplateMixin, _PaletteMixin], {
+    var ColorPalette = declare("configurablecolorpicker/ColorPalette", [_Widget, _TemplatedMixin, _WidgetsInTemplateMixin, _PaletteMixin], {
 
         templateString:
             "<div class='dijitInline dijitColorPalette' role='grid'>" +
                 "<table dojoAttachPoint='paletteTableNode' class='dijitPaletteTable' cellSpacing='0' cellPadding='0' role='presentation'>" +
                     "<tbody data-dojo-attach-point='gridNode'></tbody>" +
                 "</table>" +
-                "<button data-dojo-props='iconClass:'dijitEditorIcon dijitEditorIconDelete', showLabel: false'" +
-                    "data-dojo-type='dijit/form/Button'" +
-                    "data-dojo-attach-event='onClick:clearSelection'" +
-                    "id='${id}_clearButton' >Clear</button>" +
+                "<button data-dojo-props='iconClass:\"dijitEditorIcon dijitEditorIconDelete\", showLabel: false' " +
+                    "data-dojo-type='dijit/form/Button' " +
+                    "data-dojo-attach-event='onClick: clearSelection' " +
+                    "id='${id}_clearButton'>Clear</button>" +
             "</div>",
 
         widgetsInTemplate: true,
- 
-        clearSelection: function() {
+
+        clearSelection: function () {
             this.set("value", null);
         },
- 
+
         _dyeFactory: function (value, row, col, title) {
             return new this._dyeClass(value, row, col, title);
         },
-        
+
         buildRendering: function () {
             this.inherited(arguments);
 
             if (!this.showClearButton) {
-                dijit.byId(this.id+"_clearButton").destroy();
+                dijit.byId(this.id + "_clearButton").destroy();
             }
- 
+
             // Extract all the colors
             var values = this.colors.map(a => a.value);
 
@@ -121,6 +120,6 @@ define([
             domConstruct.place(html, cell);
         }
     });
- 
+
     return ColorPalette;
 });
