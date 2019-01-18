@@ -8,7 +8,7 @@ using EPiServer.Shell.ObjectEditing.EditorDescriptors;
 
 namespace DoubleJay.Epi.ConfigurableColorPicker.Infrastructure
 {
-    [EditorDescriptorRegistration(TargetType = typeof(IColor), UIHint = ColorPickerUIHint.ColorPicker)]
+    [EditorDescriptorRegistration(TargetType = typeof(Color), UIHint = ColorPickerUIHint.ColorPicker)]
     public class ColorPickerEditorDescriptor : EditorDescriptor
     {
         public override void ModifyMetadata(ExtendedMetadata metadata, IEnumerable<Attribute> attributes)
