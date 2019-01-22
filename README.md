@@ -1,7 +1,7 @@
 # Configurable Color Picker for Episerver
 
 ## Description
-This package provides a easy-to-use color picker for Episerver—which allows full configurability of the color pallete.
+This package provides a easy-to-use color picker for Episerver—which allows full configurability of the color palette.
 
 ## Features
 * Available colors are fully configurable
@@ -10,8 +10,8 @@ This package provides a easy-to-use color picker for Episerver—which allows fu
 
 ## Getting started
 ### Installation
-* The NuGet package can be build using the ``Build-Package.ps1`` PowerShell script
-* The package can then be installed via the Package Manger Console
+* The NuGet package can be installed from the [Episerver NuGet feed](https://nuget.episerver.com/feed/)
+* See the installation details here: https://nuget.episerver.com/package/?id=DoubleJay.Epi.ConfigurableColorPicker
 
 ### Configuration
 
@@ -79,7 +79,7 @@ Things to note:
 
 ### Usage
 
-Using the color palette is as simple as:
+Using the color picker is as simple as:
 
 ```cs
 [UIHint(ColorPickerUIHint.ColorPicker)]
@@ -87,7 +87,7 @@ Using the color palette is as simple as:
 public virtual IColor Color { get; set; }
 ```
 
-This gives you an ``IColor`` which contains then ID, name and value.
+This gives you an ``IColor`` which contains the ID, name and value.
 
 Setting a default value is also straight-forward:
 
@@ -98,3 +98,10 @@ public override void SetDefaultValues(ContentType contentType)
     Color = new Color(3);
 }
 ```
+
+### Further Information
+
+Creating this was the subject of two blog posts you can checkout here:
+
+* https://jakejon.es/blog/making-a-configurable-color-picker-for-episerver-part-1
+* https://jakejon.es/blog/making-a-configurable-color-picker-for-episerver-part-2
