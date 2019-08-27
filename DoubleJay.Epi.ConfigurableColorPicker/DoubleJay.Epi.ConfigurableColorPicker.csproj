@@ -131,6 +131,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="web.config.transform">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="module.config">
       <SubType>Designer</SubType>
     </None>
