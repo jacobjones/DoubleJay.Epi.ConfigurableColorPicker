@@ -104,6 +104,7 @@
       <HintPath>..\packages\structuremap.web-signed.3.1.6.186\lib\net40\StructureMap.Web.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
@@ -137,8 +138,10 @@
     <None Include="module.config">
       <SubType>Designer</SubType>
     </None>
-    <Compile Include="ColorPickerUIHint.cs" />
+    <Compile Include="Infrastructure\ColorPickerAttribute.cs" />
     <Compile Include="Infrastructure\ColorPickerEditorDescriptor.cs" />
+    <Compile Include="Infrastructure\IColorPickerAttribute.cs" />
+    <Compile Include="Manager\Caching\ColorPaletteManagerCachingProxy.cs" />
     <Compile Include="PropertyPaletteColor.cs" />
     <Compile Include="Manager\ColorPaletteManager.cs" />
     <Compile Include="Manager\IColorPaletteManager.cs" />

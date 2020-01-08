@@ -11,7 +11,7 @@ namespace DoubleJay.Epi.ConfigurableColorPicker
     {
         public override object Value
         {
-            get => !Number.HasValue ? null : Locate.Advanced.GetInstance<IColorPaletteManager>().GetColor(Number.Value);
+            get => !Number.HasValue ? null : Locate.Advanced.GetInstance<IColorPaletteManager>().GetColor(Number.Value, PropertyDefinitionID);
             set => base.Value = (value as IColor)?.Id ?? value;
         }
 
