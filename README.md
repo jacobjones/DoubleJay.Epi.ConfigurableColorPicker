@@ -9,7 +9,7 @@ This package provides an easy-to-use color picker for Episerver—which allows f
 * Available colors are fully configurable
 * Colors can be swapped-out as the ID is persisted (not the color code)
 * Support for different color palettes per site in a multi-site solution
-* 
+* Allows for individual properties to use a specified palette
 
 ## Getting started
 ### Installation
