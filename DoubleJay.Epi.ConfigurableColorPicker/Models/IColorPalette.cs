@@ -8,14 +8,24 @@ namespace DoubleJay.Epi.ConfigurableColorPicker.Models
     public interface IColorPalette
     {
         /// <summary>
-        /// The host the color palette applies to, or null if default.
+        /// The palette ID, or null if none defined.
         /// </summary>
-        string Host { get; set; }
+        int? Id { get; set; }
 
         /// <summary>
-        /// The fallback host, or null if none defined.
+        /// The palette name.
         /// </summary>
-        string Fallback { get; set; }
+        string Name { get; set; }
+
+        /// <summary>
+        /// The hostnames the color palette applies to, or empty if all.
+        /// </summary>
+        ICollection<string> Hosts { get; set; }
+
+        /// <summary>
+        /// The fallback palette ID, or null if none defined.
+        /// </summary>
+        int? FallbackId { get; set; }
 
         /// <summary>
         /// The max number of columns to show in the color palette.

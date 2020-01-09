@@ -11,8 +11,9 @@ namespace DoubleJay.Epi.ConfigurableColorPicker.Manager
         /// <summary>
         /// Gets the color palette for the current site, returns null if no appropriate color palette is defined.
         /// </summary>
+        /// <param name="paletteName">The palette name.</param>
         /// <returns>The relevant color palette or null.</returns>
-        IColorPalette GetPalette();
+        IColorPalette GetPalette(string paletteName = null);
 
         /// <summary>
         /// Gets all defined color palettes.
@@ -24,7 +25,8 @@ namespace DoubleJay.Epi.ConfigurableColorPicker.Manager
         /// Gets a color for the current site based on a ID.
         /// </summary>
         /// <param name="id">The ID.</param>
+        /// <param name="propertyDefinitionId">The property definition ID.</param>
         /// <returns>The relevant color.</returns>
-        IColor GetColor(int id);
+        IColor GetColor(int id, int propertyDefinitionId);
     }
 }

@@ -3,7 +3,6 @@ using DoubleJay.Epi.ConfigurableColorPicker.Manager;
 using DoubleJay.Epi.ConfigurableColorPicker.Models;
 using EPiServer.Core;
 using EPiServer.PlugIn;
-using EPiServer.ServiceLocation;
 
 namespace DoubleJay.Epi.ConfigurableColorPicker
 {
@@ -12,7 +11,7 @@ namespace DoubleJay.Epi.ConfigurableColorPicker
     {
         public override object Value
         {
-            get => !Number.HasValue ? null : ServiceLocator.Current.GetInstance<IColorPaletteManager>().GetColor(Number.Value);
+            get => !Number.HasValue ? null : Locate.Advanced.GetInstance<IColorPaletteManager>().GetColor(Number.Value, PropertyDefinitionID);
             set => base.Value = (value as IColor)?.Id ?? value;
         }
 
