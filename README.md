@@ -17,10 +17,12 @@ This package provides an easy-to-use color picker for Episerver—which allows f
 * See the installation details here: https://nuget.episerver.com/package/?id=DoubleJay.Epi.ConfigurableColorPicker
 
 ### Configuration & Usage
-**Version 2** added the ability to name palettes and use these throughout the website, as such, configuration and usage changed significantly. Please consult with the relevant documentation:
+**Version 2** added the ability to name palettes and use these throughout the website, as such, configuration and usage changed significantly. Breaking changes are listed in the [documentation](https://github.com/jacobjones/DoubleJay.Epi.ConfigurableColorPicker/wiki).
 
-* [Usage (Version 2)](https://github.com/jacobjones/DoubleJay.Epi.ConfigurableColorPicker/wiki/Usage-%28Version-2%29)
-* [Usage (Version 1)](https://github.com/jacobjones/DoubleJay.Epi.ConfigurableColorPicker/wiki/Usage-%28Version-1%29)
+Please consult with the relevant documentation for further details:
+
+* [Version 2](https://github.com/jacobjones/DoubleJay.Epi.ConfigurableColorPicker/wiki/Usage-%28Version-2%29)
+* [Version 1](https://github.com/jacobjones/DoubleJay.Epi.ConfigurableColorPicker/wiki/Usage-%28Version-1%29)
 
 ### Further Information
 
