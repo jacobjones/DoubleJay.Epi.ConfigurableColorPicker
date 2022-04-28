@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Target Name="CreateColorPickerZip" BeforeTargets="BeforeBuild">
+    <Copy SourceFiles="$(ProjectDir)\module.config" DestinationFolder="$(TmpOutDir)\content"/>
+    <Copy SourceFiles="@(ClientResources)" DestinationFiles="@(ClientResources -> '$(TmpOutDir)\content\$(ModuleVersion)\ClientResources\%(RecursiveDir)%(Filename)%(Extension)')"/>
+
+    <!-- Update the module config with the version information -->
+    <XmlPoke XmlInputPath="$(TmpOutDir)\content\module.config" Query="/module/@clientResourceRelativePath" Value="$(PackageVersion)"/>
+
+    <!-- Outputing the zip to project root -->
+    <ZipDirectory SourceDirectory="$(TmpOutDir)\content" DestinationFile="$(ProjectDir)\$(MSBuildProjectName).zip" Overwrite="true"/>
+    
+    <!-- Cleanup -->
+    <RemoveDir Directories="$(TmpOutDir)"/>
+  </Target>
+</Project>

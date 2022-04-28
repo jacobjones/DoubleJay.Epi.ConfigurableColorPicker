@@ -6,30 +6,17 @@
     <Description>Configurable color picker for Episerver</Description>
     <Copyright>Copyright © Jake Jones 2022</Copyright>
     <PackageProjectUrl>https://github.com/jacobjones/DoubleJay.Epi.ConfigurableColorPicker</PackageProjectUrl>
-    <PackageLicenseUrl>https://github.com/jacobjones/DoubleJay.Epi.ConfigurableColorPicker/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <RepositoryUrl>https://github.com/jacobjones/DoubleJay.Epi.ConfigurableColorPicker</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <AssemblyVersion>3.0.0</AssemblyVersion>
     <FileVersion>3.0.0</FileVersion>
     <PackageVersion>3.0.0</PackageVersion>
   </PropertyGroup>
-  <ItemGroup>
-    <Content Include="web.config.transform">
-      <SubType>Designer</SubType>
-    </Content>
-    <None Update="module.config">
-      <SubType>Designer</SubType>
-    </None>
+  <ItemGroup Condition="'$(TargetFramework)' == 'net5.0'">
+    <PackageReference Include="EPiServer.CMS.UI.Core" Version="[12.0.2,13.0)" />
   </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
-    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
-    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
-    <PackageReference Include="Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers" Version="0.3.310801">
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
-  </ItemGroup>
-  <ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'net6.0'">
     <PackageReference Include="EPiServer.CMS.UI.Core" Version="[12.4.0,13.0)" />
   </ItemGroup>
 </Project>
