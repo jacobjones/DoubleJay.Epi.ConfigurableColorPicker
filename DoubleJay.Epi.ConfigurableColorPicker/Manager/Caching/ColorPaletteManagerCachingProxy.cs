@@ -7,7 +7,6 @@ using EPiServer.ServiceLocation;
 
 namespace DoubleJay.Epi.ConfigurableColorPicker.Manager.Caching
 {
-    [ServiceConfiguration(typeof(IColorPaletteManager), Lifecycle = ServiceInstanceScope.Singleton)]
     public class ColorPaletteManagerCachingProxy : ColorPaletteManager
     {
         private readonly IObjectInstanceCache _objectInstanceCache;
