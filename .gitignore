@@ -339,3 +339,6 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database 
 healthchecksdb
+
+# Ignore the zip generated when building the project
+/DoubleJay.Epi.ConfigurableColorPicker/DoubleJay.Epi.ConfigurableColorPicker.zip

@@ -3,6 +3,7 @@ using DoubleJay.Epi.ConfigurableColorPicker.Manager;
 using DoubleJay.Epi.ConfigurableColorPicker.Models;
 using EPiServer.Core;
 using EPiServer.PlugIn;
+using EPiServer.ServiceLocation;
 
 namespace DoubleJay.Epi.ConfigurableColorPicker
 {
