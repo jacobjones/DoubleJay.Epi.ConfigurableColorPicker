@@ -17,6 +17,5 @@
             <Pack>true</Pack>
             <PackagePath>build\$(MSBuildProjectName).targets</PackagePath>
         </Content>
-        <None Include="..\LICENSE" Pack="true" PackagePath=""/>
     </ItemGroup>
 </Project>

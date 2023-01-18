@@ -3,16 +3,18 @@
     <OutputType>Library</OutputType>
     <TargetFrameworks>net5.0;net6.0</TargetFrameworks>
     <Title>DoubleJay.Epi.ConfigurableColorPicker</Title>
-    <Description>Configurable color picker for Episerver</Description>
-    <Copyright>Copyright © Jake Jones 2022</Copyright>
+    <Description>Configurable color picker for Optimizely CMS</Description>
+    <Copyright>Copyright © Jake Jones 2023</Copyright>
     <PackageProjectUrl>https://github.com/jacobjones/DoubleJay.Epi.ConfigurableColorPicker</PackageProjectUrl>
-    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <RepositoryUrl>https://github.com/jacobjones/DoubleJay.Epi.ConfigurableColorPicker</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <AssemblyVersion>3.0.0</AssemblyVersion>
     <FileVersion>3.0.0</FileVersion>
     <PackageVersion>3.0.0</PackageVersion>
     <PackageIcon>icon.png</PackageIcon>
+    <PackageIconUrl>https://raw.githubusercontent.com/jacobjones/DoubleJay.Epi.ConfigurableColorPicker/master/icons/color-picker-blue.png</PackageIconUrl>
   </PropertyGroup>
   <ItemGroup Condition="'$(TargetFramework)' == 'net5.0'">
     <PackageReference Include="EPiServer.CMS.UI.Core" Version="[12.0.2,13.0)" />
@@ -21,7 +23,7 @@
     <PackageReference Include="EPiServer.CMS.UI.Core" Version="[12.4.0,13.0)" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\icons\color-picker.png">
+    <None Include="..\icons\color-picker-blue.png">
       <Pack>True</Pack>
       <PackagePath>icon.png</PackagePath>
       <Link>color-picker.png</Link>
